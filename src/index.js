@@ -109,7 +109,7 @@ function writeFile(pathToFile, content, verbose) {
   }
 
   // Try to write file to disk to the given location
-  fs.writeFile(pathToFile, content, { flag: 'w' }, (error) => {
+  fs.writeFileSync(pathToFile, content, { flag: 'w' }, (error) => {
     if (error) {
       throw new Error(error);
     }
